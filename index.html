@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codificable - Blog: Conoce todo sobre formularios HTML</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+    <nav class="navigation">
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section">
+      <div class="section__container">
+        <article class="section__article">
+          <header class="article__header">
+            <div class="article-metadata">
+              <span class="article-metadata__date">25 Agosto 2023</span>
+              <span class="category-tag">Principiante</span>
+            </div>
+            <div class="author">
+              <img src="/assests/images/slim.PNG" alt="Slim Zegarra image" width="320" height="480"
+                class="author__avatar" />
+              <div class="author__info">
+                <strong>Slim Josh Zegarra Soto</strong>
+                <span>Backend Developer - Panbox</span>
+              </div>
+            </div>
+          </header>
+          <div class="content">
+            <h1>Formularios en HTML</h1>
+            <img src="/assests/images/articulo_blog_formulario.jpg" alt="Phone taking picture of meal" width="1344"
+              height="896" />
+            <p>
+              Un formulario es un conjunto de controles (botones, cajas de texto,
+              casillas de verificación, botones radio, etc) que permiten al usuario
+              introducir datos y enviarlos al servidor web para su procesamiento.
+            </p>
+            <h2>¿Qué etiqueta delimita un formulario?</h2>
+            <p>
+              La etiqueta que delimita un formulario es la etiqueta <code>&lt;form&gt; 
+                ...&lt;/form&gt;</code>. Los atributos más importantes de la etiqueta
+              form son: Action y method
+
+            </p>
+            <p>
+              Vamos a sumergirnos en la estructura de un formulario en HTML
+              que te permitirán comenzar a construir tu primer formulario:
+            </p>
+            <pre class="html"><code><span><span class="html__signo"><</span><!-- 
+               --><span class="html__etiqueta">form</span> <span class="html__metodo">action</span><!-- 
+               --><span class="html__signo">=</span><span class="html__string">"ejemplo.php" <span class="html__metodo">method</span><!-- 
+               --></span><span class="html__signo">=</span><span class="html__string">"get"</span><span class="html__signo">></span></span>
+ <span class="html__signo"><</span><span class="html__etiqueta">p</span><span class="html__signo">></span><span>Nombre: </span><!-- 
+              --><span class="html__signo"><</span><span class="html__etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+              --><span class="html__string">"text" </span><span class="html__metodo">name</span><span class="html__signo">=</span><span class="html__string">"nombre" </span><!-- 
+              --><span class="html__metodo">size</span><span class="html__signo">=</span><span class="html__string">"40"</span><span class="html__signo">> </span><!-- 
+              --><span class="html__signo"><</span><span class="html__signo">/</span><span class="html__etiqueta">p</span><span class="html__signo">></span>
+ <span class="html__signo"><</span><span class="html__etiqueta">p</span><span class="html__signo">></span><span>Año de nacimiento: </span><!-- 
+              --><span class="html__signo"><</span><span class="html__etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+              --><span class="html__string">"number" </span><span class="html__metodo">name</span><span class="html__signo">=</span><span class="html__string">"nacido" </span><!-- 
+              --><span class="html__metodo">min</span><span class="html__signo">=</span><span class="html__string">"1900"</span><span class="html__signo">> </span><!-- 
+              --><span class="html__signo"><</span><span class="html__signo">/</span><span class="html__etiqueta">p</span><span class="html__signo">></span>
+ <span class="html__signo"><</span><span class="html__etiqueta">p</span><span class="html__signo">></span><span>Sexo:</span>
+   <span class="html__signo"><</span><span class="etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+--><span class="html__string">"radio" </span><span class="html__metodo">name</span><span class="html__signo">=</span><span class="html__string">"hm" </span><!-- 
+--><span class="html__metodo">value</span><span class="html__signo">=</span><span class="html__string">"h"</span><span class="html__signo">></span><span> Hombre</span>
+   <span class="html__signo"><</span><span class="etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+--><span class="html__string">"radio" </span><span class="html__metodo">name</span><span class="html__signo">=</span><span class="html__string">"hm" </span><!-- 
+--><span class="html__metodo">value</span><span class="html__signo">=</span><span class="html__string">"hm"</span><span class="html__signo">></span><span> Mujer</span>
+ <span><</span><span>/</span><span class="html__etiqueta">p</span><span>></span>
+ <span><</span><span class="html__etiqueta">p</span><span>></span>
+   <span class="html__signo"><</span><span class="etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+   --><span class="html__string">"submit" </span><span class="html__metodo">value</span><span class="html__signo">=</span><span class="html__string">"Enviar"</span><span class="html__signo">></span>
+   <span class="html__signo"><</span><span class="etiqueta">input </span><span class="html__metodo">type</span><span class="html__signo">=</span><!-- 
+  --><span class="html__string">"reset" </span><span class="html__metodo">value</span><span class="html__signo">=</span><span class="html__string">"Borrar"</span><span class="html__signo">></span>
+ <span><</span><span>/</span><span class="html__etiqueta">p</span><span>></span>
+              </code></pre>
+            <div class="content__ejemplo">
+              <form action="ejemplo.php" method="get">
+                <p>Nombre: <input type="text" name="nombre" size="40"></p>
+                <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+                <p>Sexo:
+                  <input type="radio" name="hm" value="h"> Hombre
+                  <input type="radio" name="hm" value="m"> Mujer
+                </p>
+                <p>
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">
+                </p>
+              </form>
+
+            </div>
+            <h2>Atributos importantes de la etiqueta FORM</h2>
+            <ul>
+              <li>
+                <strong>Action: </strong>
+                <p>contiene el nombre del agente que procesará los datos remitidos al servidor (por ejemplo, un script
+                  de PHP)</p>
+              </li>
+              <li>
+                <strong>Method: </strong>
+                <p>
+                  Define la manera de enviar los datos al servidor, los valores posibles son:
+                </p>
+                <ul>
+                  <li>
+                    <span>Get: </span>
+                    <p>
+                      Los valores enviados se añaden a la dirección indicada en el atributo action.
+                    </p>
+                  </li>
+                  <li>
+                    <span>Post: </span>
+                    <p>
+                      Los valores se envian de forma separada.
+                    </p>
+                  </li>
+                </ul>
+
+              </li>
+            </ul>
+            
+
+            <h3>Atributos comunes de los controles</h3>
+            <p>
+              Algunos atributos se pueden utilizar en varios tipos de controles
+            </p>
+            <p>
+              La siguiente tabla muestra algunos tipo de atributos para los controles.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Atributo</th>
+                  <th>Etiqueta</th>
+                  <th>Concepto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td>imput</td>
+                  <td>indica el tipo de control</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>control</td>
+                  <td>Identifica al control</td>
+                </tr>
+                <tr>
+                  <td>value</td>
+                  <td>control</td>
+                  <td>Establece el valor inicial del control</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>¡Hora de ponerlo en práctica!</h2>
+            <p>
+              Con estos elementos básicos de HTML, estás listo para comenzar a
+              construir tus propias formularios web. No te preocupes si al
+              principio parece un poco abrumador, ¡la práctica es la clave
+              para el éxito!
+            </p>
+            <h2>
+              Version sonora de esta página
+            </h2>
+            <p>
+              Si deseas oir el contenido de esta página accede a este médio.
+            </p>
+          </div>
+          <audio controls>
+            <source src="https://slim1982.s3.us-east-2.amazonaws.com/postcast.wav" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="section__container footer">
+    <ul class="social-links">
+      <li>
+        <a href="#"><img src="/assests/icons/facebook.svg" alt="Facebook icon" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="/assests/icons/linkedin.svg" alt="LinkedIn icon" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="/assests/icons/twitter.svg" alt="Twitter icon" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="/assests/icons/github.svg" alt="GitHub icon" /></a>
+      </li>
+    </ul>
+    <small>&copy; 2023 Codificable - Todos los derechos reservados</small>
+  </footer>
+</body>
+
+</html>
